@@ -1,0 +1,40 @@
+/*
+Bootstrap 5 patch: features of the forms, which are not provided by Bootstrap 5
+*/
+
+/* .form-group – container of the element */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Inline form */
+.form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: .5rem;
+}
+.form-inline .form-group {
+    margin-bottom: 0;
+}
+.form-inline .form-control,
+.form-inline .form-select {
+    width: auto;
+}
+
+/* Warning state */
+.form-control.is-warning,
+.form-select.is-warning {
+    border-color: var(--bs-warning);
+}
+.warning-feedback {
+    width: 100%;
+    margin-top: .25rem;
+    font-size: .875em;
+    color: var(--bs-warning-text-emphasis);
+}
+
+input[type=range]:after {
+    padding-left: 0.5em;
+    content: attr(data-value);
+}
